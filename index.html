@@ -1,0 +1,224 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Encore Studio — портфолио</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background-color:#0c0c0c;background-image:radial-gradient(ellipse 80% 60% at 80% 100%, rgba(150,8,20,0.85) 0%, rgba(150,8,20,0) 70%),linear-gradient(180deg,#030000 0%,#150104 35%,#3d040b 70%,#5e0812 100%);background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;font-family:'Inter',system-ui,sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  a.link-underline:hover{text-decoration:underline;}
+  .btn-fill{transition:background .15s ease, color .15s ease;}
+  .btn-fill:hover{background:#ffffff !important;color:#0c0c0c !important;}
+  .btn-line{transition:background .15s ease, color .15s ease;}
+  .btn-line:hover{background:#e6231e !important;border-color:#e6231e !important;color:#0c0c0c !important;}
+  .faq-row:hover{background:rgba(255,255,255,0.03);}
+  .tile{transition:transform .2s ease;}
+  .tile:hover{transform:translateY(-6px);}
+  .video-tile{transition:transform .25s ease, box-shadow .25s ease; cursor:pointer;}
+  .video-tile:hover{transform:scale(1.06); box-shadow:0 18px 40px rgba(0,0,0,0.5); z-index:2; position:relative;}
+  video{display:block;}
+</style>
+<script>function toggleVideo(v){v.muted=false;v.loop=true;var w=v.parentNode,i=w.querySelector('.play-icon');if(v.paused){var p=v.play();if(p&&p.catch)p.catch(function(){});if(i)i.style.display='none'}else{v.pause();if(i)i.style.display='flex'}}
+function toggleFaq(b){var r=b.parentNode,a=r.querySelector('.ans'),o=a.style.display==='none';a.style.display=o?'block':'none';r.querySelector('.arr').style.transform=o?'rotate(180deg)':'none'}</script></head><body>
+
+<div style="width: 100%; min-height: 100vh; box-sizing: border-box; background: transparent; color: #f4f2ee; overflow-x: hidden;">
+
+  <!-- HEADER -->
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 28px 6vw; box-sizing: border-box; flex-wrap: wrap; gap: 16px;">
+    <a href="#top" style="font-family: 'Anton', sans-serif; font-size: 20px; letter-spacing: 0.02em; color: #E6231E;">ENCORE STUDIO</a>
+    <nav style="display: flex; gap: 32px; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; flex-wrap: wrap;">
+      <a class="link-underline" href="#services">Услуги</a>
+      <a class="link-underline" href="#portfolio">Портфолио</a>
+      <a class="link-underline" href="#why">О нас</a>
+      <a class="link-underline" href="#faq">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn-fill" style="border: 1px solid #f4f2ee; padding: 10px 22px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 999px;">Написать →</a>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="position: relative; margin: 0 6vw 96px; border-radius: 4px; overflow: hidden; min-height: 560px; display: flex; align-items: flex-end;">
+    <img src="media/af715f0545c4ed01042b1b866bc25849.jpg" alt="Нейрофотосессия — пример" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,12,0.15) 0%, rgba(12,12,12,0.55) 55%, rgba(12,12,12,0.92) 100%);"></div>
+    <div style="position: relative; padding: 56px 6vw; max-width: 900px;">
+      <div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #E6231E; margin-bottom: 18px; font-weight: 600;">AI-студия контента</div>
+      <h1 style="margin: 0 0 24px; font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(36px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.01em; text-transform: uppercase;">Фотосессии и реклама,<br>для которых не нужны съёмки</h1>
+      <p style="margin: 0 0 32px; font-size: 17px; line-height: 1.6; color: #cfcbc3; max-width: 620px;">Создаём фото, видео и анимации с помощью нейросетей — для личного бренда, карточек товаров и рекламных кампаний. Без студии, съёмочной команды и долгой подготовки.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="#portfolio" class="btn-fill" style="background: #E6231E; color: #0c0c0c; padding: 14px 30px; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 999px;">Смотреть портфолио</a>
+        <a href="#contact" class="btn-line" style="border: 1px solid #f4f2ee; padding: 14px 30px; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 999px;">Обсудить проект</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding: 0 6vw 96px;">
+    <h2 style="font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(40px, 8vw, 96px); color: #E6231E; text-transform: uppercase; margin: 0 0 48px; line-height: 0.9;">Услуги</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #262421; border-top: 1px solid #262421;">
+
+      <div style="background: #0c0c0c; padding: 40px; box-sizing: border-box;">
+        <h3 style="margin: 0 0 14px; font-size: 22px; font-weight: 700; text-transform: uppercase;">Реклама товара</h3>
+        <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #8a857c; margin-bottom: 18px;">Фото и видео в едином стиле</div>
+        <p style="margin: 0 0 24px; font-size: 15px; line-height: 1.7; color: #cfcbc3;">Съёмка продукта с моделью и предметные кадры в едином визуальном стиле — для рекламы, сайта и соцсетей.</p>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-size: 14px; color: #8a857c;">Стоимость — по запросу</span>
+          <a href="#contact" style="font-size: 22px;">↗</a>
+        </div>
+      </div>
+
+      <div style="background: #0c0c0c; padding: 40px; box-sizing: border-box;">
+        <h3 style="margin: 0 0 14px; font-size: 22px; font-weight: 700; text-transform: uppercase;">Фото с моделями</h3>
+        <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #8a857c; margin-bottom: 18px;">Карточки для маркетплейсов</div>
+        <p style="margin: 0 0 24px; font-size: 15px; line-height: 1.7; color: #cfcbc3;">Ваша одежда — на реалистичной модели, без съёмки, кастинга и логистики. Готовые карточки для Wildberries, Ozon и других площадок.</p>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-size: 14px; color: #8a857c;">Стоимость — по запросу</span>
+          <a href="#contact" style="font-size: 22px;">↗</a>
+        </div>
+      </div>
+
+      <div style="background: #0c0c0c; padding: 40px; box-sizing: border-box;">
+        <h3 style="margin: 0 0 14px; font-size: 22px; font-weight: 700; text-transform: uppercase;">Нейрофотосессии</h3>
+        <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #8a857c; margin-bottom: 18px;">Для личного бренда и соцсетей</div>
+        <p style="margin: 0 0 24px; font-size: 15px; line-height: 1.7; color: #cfcbc3;">Серия портретных кадров в едином образе, свете и стиле — без студии и съёмочной команды. Готовый контент для соцсетей, сайта и презентаций.</p>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-size: 14px; color: #8a857c;">Стоимость — по запросу</span>
+          <a href="#contact" style="font-size: 22px;">↗</a>
+        </div>
+      </div>
+
+      <div style="background: #0c0c0c; padding: 40px; box-sizing: border-box;">
+        <h3 style="margin: 0 0 14px; font-size: 22px; font-weight: 700; text-transform: uppercase;">Мультфильмы и персонажи</h3>
+        <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #8a857c; margin-bottom: 18px;">Анимация и маскоты</div>
+        <p style="margin: 0 0 24px; font-size: 15px; line-height: 1.7; color: #cfcbc3;">Анимированные персонажи и короткие ролики — для детских проектов, брендов и рекламы.</p>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-size: 14px; color: #8a857c;">Стоимость — по запросу</span>
+          <a href="#contact" style="font-size: 22px;">↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" style="padding: 0 6vw 96px;">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px;">
+      <div>
+        <div style="font-family: 'Anton', sans-serif; font-size: 40px; color: #E6231E; margin-bottom: 14px;">01</div>
+        <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; text-transform: uppercase;">Один и тот же персонаж</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfcbc3;">Модель или персонаж сохраняет внешность во всей серии — от кадра к кадру. Свет, образ и стиль остаются едиными.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Anton', sans-serif; font-size: 40px; color: #E6231E; margin-bottom: 14px;">02</div>
+        <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; text-transform: uppercase;">Логотип не искажается</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfcbc3;">Сохраняем логотипы, надписи и детали упаковки — без искажений и случайных изменений.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Anton', sans-serif; font-size: 40px; color: #E6231E; margin-bottom: 14px;">03</div>
+        <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 700; text-transform: uppercase;">Только отобранные кадры</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfcbc3;">Мы отбираем лучшие варианты и показываем только готовый результат — без десятков неудачных генераций и лишней работы с вашей стороны.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" style="padding: 0 6vw 40px;">
+    <h2 style="font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(40px, 8vw, 96px); color: #E6231E; text-transform: uppercase; margin: 0 0 12px; line-height: 0.9;">Портфолио</h2>
+    <p style="margin: 0 0 56px; font-size: 15px; color: #8a857c; max-width: 560px;">Примеры работ по каждому направлению студии.</p>
+
+    <div style="margin-bottom: 20px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6231E; font-weight: 600;">Виральный контент</div>
+    <div style="display: flex; gap: 32px; align-items: center; margin-bottom: 72px;">
+      <div class="video-wrap" style="position: relative; border-radius: 3px; overflow: hidden; width: 260px; flex-shrink: 0; aspect-ratio: 480 / 848;">
+        <video class="video-tile" src="media/9f4b2ef2d015e5b35537e902d754d459.mp4" poster="media/9f4b2ef2d015e5b35537e902d754d459.jpg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; background: #1a1917;" playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="play-icon" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;"><svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(12,12,12,0.55)"></circle><path d="M9.5 7.5l8 4.5-8 4.5z" fill="#f4f2ee"></path></svg></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 4px;">
+        <div style="font-size: 11px; color: #6f6b63; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2px;">Результаты</div>
+        <div style="display: flex; gap: 28px;">
+          <img src="media/9e25078e76f8345cf36e4b2b5d0ab30f.jpg" alt="Виральный кейс, динамика просмотров" style="height: 280px; width: auto; aspect-ratio: 1320 / 1180; object-fit: cover; border-radius: 3px; display: block;">
+          <img src="media/f2f791ea909e5f874a55930b38c0588b.jpg" alt="Виральный кейс, статистика 1" style="height: 280px; width: auto; aspect-ratio: 888 / 1127; object-fit: cover; border-radius: 3px; display: block;">
+          <img src="media/57d3bf3c2034ecfba1f6b230ff8fe2ce.jpg" alt="Виральный кейс, статистика 2" style="height: 280px; width: auto; aspect-ratio: 809 / 1161; object-fit: cover; border-radius: 3px; display: block;">
+        </div>
+        <div style="font-size: 14px; color: #cfcbc3; line-height: 1.8; max-width: 320px; margin-top: 8px;">
+          <div><b style="color: #f4f2ee;">545 058</b> просмотров за 1,5 месяца</div>
+          <div><b style="color: #f4f2ee;">98,8%</b> просмотров — от пользователей вне подписчиков</div>
+          <div><b style="color: #f4f2ee;">+496</b> новых подписчиков за период</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 8px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6231E; font-weight: 600;">Видео</div>
+    <p style="margin:0 0 20px;font-size:13px;color:#6f6b63;">Нажмите, чтобы посмотреть</p>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 72px;">
+      <div class="video-wrap" style="position: relative; border-radius: 3px; overflow: hidden;">
+        <video class="video-tile" src="media/244daee80031510f98ac53a70f4fb389.mp4" poster="media/244daee80031510f98ac53a70f4fb389.jpg" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; background: #1a1917;" playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="play-icon" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;"><svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(12,12,12,0.55)"></circle><path d="M9.5 7.5l8 4.5-8 4.5z" fill="#f4f2ee"></path></svg></div>
+      </div>
+      <div class="video-wrap" style="position: relative; border-radius: 3px; overflow: hidden;">
+        <video class="video-tile" src="media/6fa10287b63e10809195ccc8bf9c065c.mp4" poster="media/6fa10287b63e10809195ccc8bf9c065c.jpg" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; background: #1a1917;" playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="play-icon" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;"><svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(12,12,12,0.55)"></circle><path d="M9.5 7.5l8 4.5-8 4.5z" fill="#f4f2ee"></path></svg></div>
+      </div>
+      <div class="video-wrap" style="position: relative; border-radius: 3px; overflow: hidden;">
+        <video class="video-tile" src="media/a9916e553a440577b24386d3d0526a03.mp4" poster="media/a9916e553a440577b24386d3d0526a03.jpg" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; background: #1a1917;" playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="play-icon" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;"><svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(12,12,12,0.55)"></circle><path d="M9.5 7.5l8 4.5-8 4.5z" fill="#f4f2ee"></path></svg></div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6231E; font-weight: 600;">Реклама товара</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-bottom: 72px;">
+      <div class="video-wrap" style="position: relative; border-radius: 3px; overflow: hidden; margin-top: 0;">
+        <video class="video-tile" src="media/239a08c4a2e7ea9a5d89919fb7855b22.mp4" poster="media/239a08c4a2e7ea9a5d89919fb7855b22.jpg" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; background: #1a1917;" playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="play-icon" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;"><svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(12,12,12,0.55)"></circle><path d="M9.5 7.5l8 4.5-8 4.5z" fill="#f4f2ee"></path></svg></div>
+      </div>
+      <img class="tile" src="media/b71eead8d42643f25bfcb30096d50463.jpg" alt="Реклама товара, работа 1" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; margin-top: 24px;">
+      <img class="tile" src="media/e2cdd6abdd0a094331e69382f515c04f.jpg" alt="Реклама товара, работа 2" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; margin-top: 0;">
+      <img class="tile" src="media/d40a82777d210160ee1aba2aab536659.jpg" alt="Реклама товара, работа 3" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; margin-top: 24px;">
+    </div>
+
+    <div style="margin-bottom: 20px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6231E; font-weight: 600;">Маркетплейсы</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 72px;">
+      <img class="tile" src="media/15aa4b2a3f1898218603b779b5ac82ab.jpg" alt="Маркетплейсы, работа 1" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; margin-top: 0;">
+      <img class="tile" src="media/ccc0b61e9f1e9e268bbdd2834af31823.jpg" alt="Маркетплейсы, работа 2" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; margin-top: 24px;">
+      <img class="tile" src="media/1efea8f63efffbaefb7d2fc753b2a4a7.jpg" alt="Маркетплейсы, работа 3" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; margin-top: 0;">
+    </div>
+
+    <div style="margin-bottom: 20px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6231E; font-weight: 600;">Нейрофотосессии</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 24px;">
+      <img class="tile" src="media/af715f0545c4ed01042b1b866bc25849.jpg" alt="Нейрофотосессия, работа 1" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px;">
+      <img class="tile" src="media/8d80a934e6d916f58f5c14ca9dd8d2fa.jpg" alt="Нейрофотосессия, работа 2" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px;">
+      <img class="tile" src="media/371d999687f9915f96c9b79c02a01839.jpg" alt="Нейрофотосессия, работа 3" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px;">
+      <img class="tile" src="media/5b173e5347e063b809dc0b632b0a8523.jpg" alt="Нейрофотосессия, работа 4" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px;">
+      <img class="tile" src="media/726e44dab9e02a2e8e76d78c6bb70eea.jpg" alt="Нейрофотосессия, работа 5" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px;">
+      <img class="tile" src="media/3360de72f05d0f41476706efe819caa1.jpg" alt="Нейрофотосессия, работа 6" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px;">
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding: 96px 6vw 96px;">
+    <h2 style="font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(40px, 8vw, 96px); color: #E6231E; text-transform: uppercase; margin: 0 0 48px; line-height: 0.9;">FAQ</h2>
+
+    <div style="border-top: 1px solid #262421;">
+      <div class="faq-row" style="border-bottom:1px solid #262421"><button type="button" onclick="toggleFaq(this)" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 4px;cursor:pointer;color:#f4f2ee"><span style="font-size:13px;color:#6f6b63;min-width:32px">/01</span><span style="flex-grow:1;font-size:16px;font-weight:600;text-transform:uppercase">Что входит в нейрофотосессию?</span><span class="arr" style="font-size:18px;transition:transform .15s">↓</span></button><div class="ans" style="display:none;padding:0 4px 26px 44px;font-size:15px;line-height:1.7;color:#cfcbc3;max-width:640px">Обсуждаем референсы и образ, генерируем серию кадров в едином стиле, отбираем лучшие и ретушируем. На выходе — готовая подборка фотографий без студии и визажиста.</div></div><div class="faq-row" style="border-bottom:1px solid #262421"><button type="button" onclick="toggleFaq(this)" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 4px;cursor:pointer;color:#f4f2ee"><span style="font-size:13px;color:#6f6b63;min-width:32px">/02</span><span style="flex-grow:1;font-size:16px;font-weight:600;text-transform:uppercase">Как отправить бриф на проект?</span><span class="arr" style="font-size:18px;transition:transform .15s">↓</span></button><div class="ans" style="display:block;padding:0 4px 26px 44px;font-size:15px;line-height:1.7;color:#cfcbc3;max-width:640px">Напишите нам через форму на сайте или в мессенджер — пришлите референсы, товар или фото одежды, и мы обсудим детали и сроки.</div></div><div class="faq-row" style="border-bottom:1px solid #262421"><button type="button" onclick="toggleFaq(this)" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 4px;cursor:pointer;color:#f4f2ee"><span style="font-size:13px;color:#6f6b63;min-width:32px">/03</span><span style="flex-grow:1;font-size:16px;font-weight:600;text-transform:uppercase">Подходит ли мой товар для карточек на маркетплейсе?</span><span class="arr" style="font-size:18px;transition:transform .15s">↓</span></button><div class="ans" style="display:none;padding:0 4px 26px 44px;font-size:15px;line-height:1.7;color:#cfcbc3;max-width:640px">Мы подбираем модель и позы под конкретный товар — одежду, обувь и аксессуары. Пришлите фото изделия, и мы предложим подходящий вариант.</div></div><div class="faq-row" style="border-bottom:1px solid #262421"><button type="button" onclick="toggleFaq(this)" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 4px;cursor:pointer;color:#f4f2ee"><span style="font-size:13px;color:#6f6b63;min-width:32px">/04</span><span style="flex-grow:1;font-size:16px;font-weight:600;text-transform:uppercase">Сколько кадров я получу?</span><span class="arr" style="font-size:18px;transition:transform .15s">↓</span></button><div class="ans" style="display:none;padding:0 4px 26px 44px;font-size:15px;line-height:1.7;color:#cfcbc3;max-width:640px">Количество кадров зависит от выбранного тарифа и типа съёмки — фиксируем в брифе перед началом работы.</div></div><div class="faq-row" style="border-bottom:1px solid #262421"><button type="button" onclick="toggleFaq(this)" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 4px;cursor:pointer;color:#f4f2ee"><span style="font-size:13px;color:#6f6b63;min-width:32px">/05</span><span style="flex-grow:1;font-size:16px;font-weight:600;text-transform:uppercase">Как быстро будет готов результат?</span><span class="arr" style="font-size:18px;transition:transform .15s">↓</span></button><div class="ans" style="display:none;padding:0 4px 26px 44px;font-size:15px;line-height:1.7;color:#cfcbc3;max-width:640px">Сроки зависят от объёма проекта — озвучиваем их после утверждения брифа и референсов.</div></div><div class="faq-row" style="border-bottom:1px solid #262421"><button type="button" onclick="toggleFaq(this)" style="all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 4px;cursor:pointer;color:#f4f2ee"><span style="font-size:13px;color:#6f6b63;min-width:32px">/06</span><span style="flex-grow:1;font-size:16px;font-weight:600;text-transform:uppercase">Можно ли заказать мультфильм или анимированного персонажа?</span><span class="arr" style="font-size:18px;transition:transform .15s">↓</span></button><div class="ans" style="display:none;padding:0 4px 26px 44px;font-size:15px;line-height:1.7;color:#cfcbc3;max-width:640px">Да, мы создаём анимированных персонажей и мультипликационные ролики для детских каналов, маскотов бренда и рекламы. Примеры — в нашем профиле.</div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" style="padding: 64px 6vw 40px; border-top: 1px solid #262421;">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-bottom: 72px;">
+      <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #6f6b63;">Портфолио · Услуги · О нас</div>
+      <div style="font-size: 15px; line-height: 1.7; color: #cfcbc3;">Хотите обсудить проект? Напишите любым удобным способом — ответим в течение 1–2 рабочих дней.</div>
+      <div style="font-size: 15px; line-height: 2; display: grid; grid-template-columns: auto 15px; column-gap: 10px; row-gap: 2px; align-items: center; justify-content: end;">
+        <a class="link-underline" href="https://t.me/renerarre" style="display: contents; color: #f4f2ee;"><span style="text-align: right;">@renerarre</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7; justify-self: end;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        <a class="link-underline" href="mailto:marrias_1@mail.ru" style="display: contents; color: #f4f2ee;"><span style="text-align: right;">marrias_1@mail.ru</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7; justify-self: end;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 7l10 6 10-6"></path></svg></a>
+        <a class="link-underline" href="#" style="display: contents; color: #f4f2ee;"><span style="text-align: right;">@kiki.toony</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7; justify-self: end;"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.3" cy="6.7" r="0.4" fill="currentColor" stroke="none"></circle></svg></a>
+        <div style="grid-column: 1; font-size: 11px; color: #6f6b63; font-weight: 400; line-height: 1.5; margin-top: 4px; max-width: 230px; text-align: right; justify-self: end;">*принадлежит компании Meta, признанной экстремистской организацией и запрещённой в России</div>
+      </div>
+    </div>
+
+    <div style="font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(48px, 12vw, 160px); line-height: 0.85; color: #E6231E; text-transform: uppercase; word-break: break-word; margin-bottom: 32px;">ENCORE STUDIO</div>
+
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #6f6b63; border-top: 1px solid #262421; padding-top: 20px;">
+      <span>© 2026 Все права защищены</span>
+      <span>marrias_1@mail.ru</span>
+      <span>Работы созданы с помощью нейросетей</span>
+    </div>
+  </footer>
+
+</div>
+</body></html>
